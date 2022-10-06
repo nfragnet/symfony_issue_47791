@@ -4,18 +4,19 @@
 
 `docker compose run composer install` 
 
-`docker compose run php doctrine:schema:create`
+`docker compose run php bin/console doctrine:schema:create`
+
+`docker compose run php bin/console doctrine:schema:validate`
 
 Everything is ok, the database should be created in `var/data.db`
-Delete it.
 
 ## Second step: Upgrade to 5.4
 
 Update `symfony/*` dependencies in composer.json to "5.4.*" and run the following
 
-`docker compose run composer upgrade` 
+`docker compose run composer update symfony/*` 
 
-`docker compose run php doctrine:schema:create`
+`docker compose run php doctrine:schema:validate`
 
 You should have the following error 
 ```
