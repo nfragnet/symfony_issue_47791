@@ -1,4 +1,4 @@
-# Symfony bug 47791 reproducer
+# Symfony [bug 47791](https://github.com/symfony/symfony/issues/47791) reproducer
 
 ## First step: Installation of a minimal 5.3 project
 
